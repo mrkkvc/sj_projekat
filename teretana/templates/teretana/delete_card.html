@@ -1,0 +1,16 @@
+{% extends 'teretana/main.html' %}
+
+{% block content %}
+
+<p>Da li ste sigurni da zelite da obrisete "{{item.str}}?"</p>
+
+<form action="{% url 'teretana:DeleteC' item.id %}" method="POST">
+
+
+    {% csrf_token %}
+    <a class="btn btn-warning"  href="{% url 'teretana:Home' %}">Cancel</a>
+
+    <input class="btn btn-danger"  type="submit" name="Confirm">
+</form>
+
+{% endblock %}
