@@ -14,3 +14,8 @@ class CardForm(ModelForm):
     class Meta:
         model = Card
         fields = '__all__'
+
+class CreateUserForm(UserCreationForm):
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'password1', 'password2']
