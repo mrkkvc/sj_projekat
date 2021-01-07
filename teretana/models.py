@@ -12,5 +12,5 @@ class Member(models.Model):
     card_type = models.ForeignKey(Card, on_delete = models.CASCADE)
 
     def str(self):
-        return self.naziv
+        return self.name
 

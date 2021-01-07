@@ -18,9 +18,8 @@
             {% for i in member %}
             <tr>
                  <td>{{i.name}}</td>
-                 <td>{{i.card_type}}</td>
+                 <td>{{i.card_type.str}}</td>
             </tr>
-
             {% endfor %}
         </table>
     </div>
@@ -40,7 +39,6 @@
 
             {% for i in card %}
             <tr>
-                 <td></td>
                  <td>{{i.description}}</td>
                  <td>{{i.price}}</td>
                  </tr>
